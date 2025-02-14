@@ -1,0 +1,246 @@
+/* Estilos generales */
+html,body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* 🔹 Estilos para la pantalla de bienvenida */
+#bienvenida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #282c36;
+    color: white;
+}
+
+#btn-empezar {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#btn-empezar:hover {
+    background-color: #e68900;
+}
+
+/* 🔹 Estilos para el contenido principal */
+#contenido-principal {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+header h1{
+    text-shadow: 2px 2px 4px rgb(0, 0, 0) ;
+}
+
+header{
+    background-color: rgb(41, 50, 65);
+    color: rgb(235, 250, 250);
+    padding: 15px 0px 15px 0px;
+    text-align: center;
+}
+
+/* 🔹 Estilos para la barra de navegación */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    flex-direction: column; /* Modo móvil: los enlaces van en columna */
+    align-items: center;
+    background-color: rgb(61, 90, 128);
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: rgb(235, 250, 250);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: rgb(51, 77, 112);
+    border-radius: 5px;
+}
+
+/* 🔹 Estilos para las secciones */
+main {
+    text-align: center;
+}
+
+/* 🔹 Organización de los temas (Programación Estructurada y POO) */
+.contenido {
+    display: flex;
+    flex-direction: column; /* En móvil, los elementos van en columna */
+    align-items: center;
+    margin: 20px 15px;
+    gap: 20px;
+}
+
+.tema {
+    background-color: #cec9c9;
+    padding: 15px;
+    border-radius: 5px;
+    width: 90%; /* Ocupa casi todo el ancho en móvil */
+    max-width: 400px;
+    transition: box-shadow 0.3s ease-in;
+    border-radius: 10px;
+}
+
+.tema:hover{
+    box-shadow: 0 8px 5px rgb(0, 0, 0, 0.5) ;
+}
+
+.tema a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #ff9800;
+    color: rgb(235, 250, 250);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.tema a:hover {
+    background-color: #e68900;
+}
+
+/* 🔹 Footer */
+footer {
+    background-color: rgb(41, 50, 65);
+    color: rgb(224, 251, 252);
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* 🔹 Estilos del botón hamburguesa */
+.menu-btn {
+    display: none; /* Oculto en pantallas grandes */
+    background: rgb(19, 24, 34);
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(241, 245, 248);
+    position: absolute;
+    top: 85px;
+    right: 20px;
+}
+
+.fondo {
+    background-image: url('img/fondo1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.fondo h2{
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    text-shadow: 3px 3px 2px rgb(0, 0, 0);
+    display: inline-block;
+    padding: 5px;
+}
+
+.fondo p{
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
+    border-radius: 25px;
+    color: white; /* Color del texto */
+    padding: 20px; /* Espacio alrededor del texto */
+    display: inline-block; /* Hace que el fondo se ajuste al tamaño del texto */
+    text-align: justify;
+    font-size: 18px;
+}
+
+/* 🔹 Ocultar el menú en móviles */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block; /* Mostrar botón ☰ en móviles */
+    }
+
+    nav {
+        display: none; /* Ocultar menú por defecto */
+        position: absolute;
+        top: 130px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Cuando el menú esté activo */
+    nav.active {
+        display: block;
+    }
+}
+
+/* ============================== */
+/* 🔥 RESPONSIVE DESIGN (TABLET Y ESCRITORIO) 🔥 */
+/* ============================== */
+
+@media (min-width: 768px) {
+    header{
+        padding: 15px 0px 0px 0px;
+    }
+    
+    /* 🔹 La barra de navegación se convierte en fila */
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    /* 🔹 Se muestran los temas en fila */
+    .contenido {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .tema {
+        width: 40%; /* En tablets y PC, los elementos son más grandes */
+        width: 400px;
+        height: 200px;
+    }
+
+    .fondo {
+        padding: 50px;
+    }
+    
+}
+
+@media (min-width: 1024px) {
+    /* 🔹 Aumentamos el tamaño del contenido */
+    .tema {
+        width: 30%;
+        max-width: 350px;
+    }
+}

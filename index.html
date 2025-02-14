@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Programación</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Pantalla de bienvenida -->
+    <div id="bienvenida">
+        <h1>Bienvenido a este sitio</h1>
+        <p>Aquí aprenderás lo básico de la programación</p>
+        <button id="btn-empezar">Empezar</button>
+    </div>
+
+    <!-- Contenido principal (se oculta hasta que se presiona "Empezar") -->
+    <div id="contenido-principal" style="display: none;">
+
+        <header>
+            <h1>Aprende los Básicos de Programación</h1>
+
+            <button id="menu-toggle" class="menu-btn">☰</button>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="#" class="nav-link" data-seccion="inicio">Inicio</a></li>
+                    <li><a href="#" class="nav-link" data-seccion="pe">Programación Estructurada</a></li>
+                    <li><a href="#" class="nav-link" data-seccion="poo">POO</a></li>
+                    <li><a href="#" class="nav-link" data-seccion="blog">Blog</a></li>
+                    <li><a href="#" class="nav-link" data-seccion="contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id= "inicio" class="intro">
+                <div class="fondo">
+                    <h2>Introducción a la Programación</h2>
+                    <p>La programación es el proceso de escribir instrucciones que permiten a las computadoras 
+                        realizar tareas específicas. A través del código, se crean aplicaciones, se automatizan 
+                        procesos y se resuelven problemas de manera eficiente. Es un campo bastante amplio, con 
+                        diferentes enfoques y lenguajes, cada uno diseñado para abordar distintas necesidades y 
+                        tipos de proyectos. Al aprender a programar, puedes desarrollar soluciones tecnológicas 
+                        que transforman ideas en herramientas útiles, facilitando tareas y mejorando la productividad en muchos ámbitos. <br><br>
+                        
+                        Este espacio está diseñado para ofrecerte una visión básica de la programación, cubriendo los fundamentos 
+                        esenciales de forma simple y concisa. A lo largo de los contenidos, verás una breve explicación de los 
+                        temas más importantes y tendrás acceso a tutoriales prácticos que te ayudarán a poner en práctica lo aprendido. 
+                        Si eres nuevo en el mundo de la programación o quieres refrescar conceptos básicos, aquí encontrarás el punto de partida ideal.</p>   
+                </div>
+                <div class="contenido">
+                    <div class="tema">
+                        <h3>Programación Estructurada</h3>
+                        <p>Un paradigma basado en el uso de estructuras de control como secuencias, decisiones y bucles...</p>
+                        <a href="#" class="ver-mas" data-seccion="pe">Ver más</a>
+                    </div>
+                    <div class="tema">
+                        <h3>Programación Orientada a Objetos</h3>
+                        <p>Un enfoque donde los programas se modelan con objetos que contienen datos y comportamientos...</p>
+                        <a href="#" class="ver-mas" data-seccion="poo">Ver más</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pe" style="display: none;">
+                <h2>Programación Estructurada</h2>
+                <p>Aquí encontrarás información más detallada sobre Programación Estructurada...</p>
+            </section>
+        
+            <section id="poo" style="display: none;">
+                <h2>Programación Orientada a Objetos</h2>
+                <p>Aquí encontrarás información más detallada sobre POO...</p>
+            </section>
+        
+            <section id="blog" style="display: none;">
+                <h2>Blog</h2>
+                <p>Aquí puedes encontrar artículos sobre programación.</p>
+            </section>
+        
+            <section id="contacto" style="display: none;">
+                <h2>Contacto</h2>
+                <p>Formulario de contacto en construcción...</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Aprende Programación</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
