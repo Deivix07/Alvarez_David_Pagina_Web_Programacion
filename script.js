@@ -53,4 +53,41 @@ document.addEventListener("DOMContentLoaded", () => {
             menu.classList.remove("active");
         });
     });
+
+    const title = "¡Bienvenido al Mundo de la Programación!";
+    let a = 0;
+    
+    function typeTitle(callback) {
+      if (a < title.length) {
+        document.getElementById("title").innerHTML += title.charAt(a);
+        a++;
+        setTimeout(() => typeTitle(callback), 80);
+      } else {
+        callback(); // Llama a la función para escribir el párrafo después
+      }
+    }
+  
+    const text = "Aquí aprenderás lo básico de la programación.";
+    let i = 0;
+  
+    function typeText(callback) {
+      if (i < text.length) {
+        document.getElementById("text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(() => typeText(callback), 80);
+      } else {
+        callback(); // Muestra el botón al final
+      }
+    }
+  
+    function showButton() {
+        const button = document.getElementById("btn-empezar");
+        button.style.transition = "opacity 1s ease-in-out"; // Establecer la transición
+        button.style.opacity = 1; // Cambiar la opacidad para mostrar el botón
+        button.style.pointerEvents = "auto"; // Habilitar los eventos del botón
+      }
+  
+    // Iniciar escritura en orden
+    typeTitle(() => typeText(showButton));
+    //
 });

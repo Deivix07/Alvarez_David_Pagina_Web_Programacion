@@ -8,18 +8,18 @@
 </head>
 <body>
 
-    <!-- Pantalla de bienvenida -->
+    <!-- Pantalla de bienvenidas -->
     <div id="bienvenida">
-        <h1>Bienvenido a este sitio</h1>
-        <p>Aquí aprenderás lo básico de la programación</p>
-        <button id="btn-empezar">Empezar</button>
+        <h1 id="title"></h1>
+        <p id="text"></p>
+        <button id="btn-empezar" style="opacity: 0; pointer-events: none">Empezar</button>
     </div>
 
     <!-- Contenido principal (se oculta hasta que se presiona "Empezar") -->
     <div id="contenido-principal" style="display: none;">
 
         <header>
-            <h1>Aprende los Básicos de Programación</h1>
+            <h1>Lo Esencial de la Programación</h1>
 
             <button id="menu-toggle" class="menu-btn">☰</button>
 
@@ -38,7 +38,7 @@
             <section id= "inicio" class="intro">
                 <div class="fondo">
                     <h2>Introducción a la Programación</h2>
-                    <p>La programación es el proceso de escribir instrucciones que permiten a las computadoras 
+                    <p>La <B>programación</B> es el proceso de escribir instrucciones que permiten a las computadoras 
                         realizar tareas específicas. A través del código, se crean aplicaciones, se automatizan 
                         procesos y se resuelven problemas de manera eficiente. Es un campo bastante amplio, con 
                         diferentes enfoques y lenguajes, cada uno diseñado para abordar distintas necesidades y 
@@ -53,12 +53,15 @@
                 <div class="contenido">
                     <div class="tema">
                         <h3>Programación Estructurada</h3>
-                        <p>Un paradigma basado en el uso de estructuras de control como secuencias, decisiones y bucles...</p>
+                        <p>La <B>Programación Estructurada</B> es un paradigma de programación que se basa en dividir el código en bloques organizados y 
+                            controlados mediante estructuras como secuencias, selecciones (condicionales) e iteraciones (bucles). Su objetivo es mejorar 
+                            la legibilidad y mantenibilidad del código...</p>
                         <a href="#" class="ver-mas" data-seccion="pe">Ver más</a>
                     </div>
                     <div class="tema">
                         <h3>Programación Orientada a Objetos</h3>
-                        <p>Un enfoque donde los programas se modelan con objetos que contienen datos y comportamientos...</p>
+                        <p> La <B>Programación Orientada a Objetos (POO)</B>, es un paradigma que organiza el código en torno a objetos, los cuales agrupan datos (atributos) y comportamientos (métodos). 
+                            Se basa en principios como la encapsulación, la herencia y el polimorfismo, permitiendo reutilizar y estructurar mejor el código...</p>
                         <a href="#" class="ver-mas" data-seccion="poo">Ver más</a>
                     </div>
                 </div>
