@@ -91,13 +91,13 @@
                     <div class="rectangulo" data-seccion="variables">
                         <img src="img/icon3.png" class="icono">
                         <div class="texto">
-                            <p>Condicionales</p>
+                            <p>Variables y Tipos de datos</p>
                         </div>
                     </div>
                     <div class="rectangulo" data-seccion="estructuras">
                         <img src="img/icon4.png" class="icono">
                         <div class="texto">
-                            <p>Bucles</p>
+                            <p>Estructuras de Control</p>
                         </div>
                     </div>
                     <div class="rectangulo" data-seccion="funciones">
@@ -132,7 +132,8 @@
                         <span class="close">&times;</span>
                         <h3>¿Qué es la Programación Estructurada?</h3>
                         <p>La programación estructurada es un estilo de programación que organiza el flujo de ejecución del programa de manera lógica, permitiendo que sea más comprensible y fácil de mantener. A diferencia de otros paradigmas como la programación orientada a objetos, se enfoca en el uso de estructuras de control y la organización secuencial del código</p>
-                        <p> <strong>Principales características:</strong><br>
+                        <p><strong>Principales características:</strong></p>
+                        <p class="salto">
                             <strong>Secuencia:</strong> El código se ejecuta en orden, línea por línea, sin saltos inesperados. <br>
                             <strong>Selección:</strong> El flujo del programa puede tomar diferentes caminos dependiendo de las condiciones (estructura if). <br>
                             <strong>Iteración:</strong> Permite repetir acciones utilizando bucles (for, while).
@@ -145,7 +146,8 @@
                         <span class="close">&times;</span>
                         <h3>Variables y Tipos de datos</h3>
                         <p>Las <strong>variables</strong> son contenedores que almacenan datos y que pueden cambiar durante la ejecución del programa. Para declarar una variable, es necesario especificar el <strong>tipo de dato</strong> (números, caracteres, booleanos, etc.) que almacenará y un nombre único para la variable.</p>
-                        <p> <strong>Tipos de Datos:</strong> <br>
+                        <p><strong>Tipos de Datos:</strong></p>
+                        <p class="salto">
                             <strong>Entero (int):</strong> Almacena números enteros. <br>
                             <strong>Flotante (float):</strong> Almacena números con decimales. <br>
                             <strong>Doble (double):</strong> Similar a float, pero con mayor precisión. <br>
@@ -155,22 +157,98 @@
                         <p>
                             <strong>Ejemplo:</strong>
                         </p>
-                        <pre><code>int suma(int a, int b) {
-    return a + b;
-}
-int main() {
-    int resultado = suma(5, 3);
-    printf("El resultado de la suma es: %d", resultado);
-    return 0;
-}</code></pre>
+                        <pre><code>int edad = 21; // Variable de tipo entero
+float altura = 1.55; // Variable de tipo flotante
+char text = 'Hola mundo'; // Variable de tipo carácter
+bool esEstudiante = true; // Variable de tipo booleano"</code></pre>
                     </div>
                 </div>
 
-                <div id="modal-condicionales" class="modal">
+                <div id="modal-estructuras" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <h3>Condicionales</h3>
-                        <p>Las estructuras condicionales permiten que el programa tome decisiones según las condiciones que se presenten...</p>
+                        <h3>Estructuras de Control</h3>
+                        <p>Las estructuras de control son fundamentales en la programación estructurada. Permiten decidir qué instrucciones se deben ejecutar en función de ciertas condiciones o repetir bloques de código. Se dividen en estructuras condicionales y estructuras iterativas (bucles).</p>
+                        <p><strong>Condicionales (if, else, switch):</strong> <br> Las estructuras condicionales permiten ejecutar diferentes bloques de código según se cumpla o no una condición.</p>
+                        <p class="salto"><strong>• if - else:</strong> Se usa para ejecutar un bloque de código si una condición es verdadera, y otro si es falsa.</p>
+                        <pre><code>int main() {
+    int edad = 18;
+
+    if (edad >= 18) {
+        printf("Eres mayor de edad.\n");
+    } else {
+        printf("Eres menor de edad.\n");
+    }
+
+    return 0;
+}</code></pre>
+                        <p class="salto"><strong>• if - else if - else:</strong> Se usa cuando hay múltiples condiciones a evaluar en cascada.</p>
+                        <pre><code>int main() {
+    int nota = 75;
+
+    if (nota >= 90) {
+        printf("Tienes una A.\n");
+    } else if (nota >= 80) {
+        printf("Tienes una B.\n");
+    } else if (nota >= 70) {
+        printf("Tienes una C.\n");
+    } else {
+        printf("Reprobaste.\n");
+    }
+
+    return 0;
+}</code></pre>
+                        <p class="salto"><strong>• switch - case:</strong> Se usa cuando hay varias opciones específicas para una variable.</p>
+                        <pre><code>int main() {
+    int opcion = 2;
+
+    switch (opcion) {
+        case 1:
+            printf("Seleccionaste opción 1.\n");
+            break;
+        case 2:
+            printf("Seleccionaste opción 2.\n");
+            break;
+        case 3:
+            printf("Seleccionaste opción 3.\n");
+            break;
+        default:
+            printf("Opción no válida.\n");
+    }
+
+    return 0;
+}</code></pre>
+                        <p><strong>Bucles (for, while, do while):</strong> <br>Los bucles permiten ejecutar un bloque de código varias veces mientras se cumpla una condición.</p>
+                        <p class="salto"><strong>• while:</strong> Ejecuta un bloque de código mientras la condición sea verdadera.</p>
+                        <pre><code>int main() {
+    int i = 1;
+
+    while (i <= 5) {
+        printf("Iteración %d\n", i);
+        i++;
+    }
+
+    return 0;
+}</code></pre>
+                        <p class="salto"><strong>• do - while:</strong> Similar a while, pero siempre ejecuta el bloque al menos una vez.</p>
+                        <pre><code>int main() {
+    int i = 1;
+
+    do {
+        printf("Iteración %d\n", i);
+        i++;
+    } while (i <= 5);
+
+    return 0;
+}</code></pre>
+                        <p class="salto"><strong>• for:</strong> Se usa cuando conocemos cuántas veces debe repetirse el bloque de código.</p>
+                        <pre><code>int main() {
+    for (int i = 1; i <= 5; i++) {
+        printf("Iteración %d\n", i);
+    }
+
+    return 0;
+}</code></pre>
                     </div>
                 </div>
 

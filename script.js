@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Mostrar el contenido principal al hacer clic en "Empezar"
     btnEmpezar.addEventListener("click", () => {
+        document.body.style.overflow = "auto"; // Habilitar scroll
+        document.documentElement.style.overflow = "auto"; // Asegurar que HTML también tenga scroll
         bienvenida.style.display = "none";
         contenidoPrincipal.style.display = "block";
         setTimeout(() => {

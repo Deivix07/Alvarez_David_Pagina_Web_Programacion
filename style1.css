@@ -1,3 +1,47 @@
+/* Estilo para las subsecciones */
+.subsecciones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Estilo para cada rectángulo */
+.rectangulo {
+    background-color: rgb(152, 193, 217);
+    margin: 0 auto;
+    color: rgb(41, 50, 65);
+    padding: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transición para la transformación y sombra */
+    width: 80%;
+    max-width: 500px;
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+    gap: 10px; /* Espacio entre el icono y el contenedor de texto */
+}
+
+/* Estilo para el contenedor del texto */
+.rectangulo .texto {
+    flex-grow: 1; /* Permite que el contenedor del texto ocupe todo el espacio disponible */
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+/* Efecto hover para los rectángulos */
+.rectangulo:hover {
+    background-color: rgb(131, 177, 204);
+    transform: translateY(-6px); /* Levanta el rectángulo hacia arriba */
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2); /* Sombra para dar la sensación de profundidad */
+}
+
+/* Estilo para el icono dentro del rectángulo */
+#pe img.icono {
+    width: 30px; /* Ajusta el tamaño del icono */
+    height: 30px;
+    flex-shrink: 0; /* Evita que el icono se reduzca */
+}
+
 /* Estilo para el Modal */
 .modal {
     display: none; /* Ocultar el modal por defecto */
@@ -18,7 +62,7 @@
     padding: 20px;
     border-radius: 5px;
     width: 80%; /* Ajustar tamaño */
-    max-width: 600px;
+    max-width: 900px;
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
     position: absolute; /* Para poder usar top y left */
     top: 50%; /* Centrado vertical */
@@ -26,6 +70,11 @@
     transform: translate(-50%, -50%); /* Ajuste para centrar el modal completamente */
     max-height: 80%; /* Ajustar la altura máxima */
     overflow-y: auto; /* Permite desplazamiento vertical si el contenido excede la altura */
+}
+
+.salto {
+    margin-left: 12px; /* Ajusta el valor según la cantidad de espacios deseados */
+    font-style: oblique;
 }
 
 /* Botón para cerrar el modal */
@@ -50,8 +99,9 @@
 }
 
 pre {
+    margin: 0 20px;
     display: block;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.5;
     background-color: rgb(231, 239, 245); /* Prueba sin fondo */
     padding: 10px;
