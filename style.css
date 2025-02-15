@@ -10,7 +10,7 @@ html,body {
 
 /* 🔹 Estilos para la pantalla de bienvenidas */
 #bienvenida {
-    background-image: url('img/fondo1.PNG');
+    background-image: url('img/fondo1.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
