@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   
-    const text = "Aquí aprenderás lo básico de la programación.";
+    const text = "Aquí aprenderás los fundamentos básicos para comenzar tu camino en la programación de forma fácil y práctica";
     let i = 0;
   
     function typeText(callback) {
@@ -122,4 +122,5 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+    
 });

@@ -118,3 +118,50 @@ code {
     display: block;
     font-family: monospace;
 }
+
+/* Estilo para los inputs */
+.ejercicio1 input{
+    width: 250px;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+.ejercicio1 input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilo para el botón */
+.ejercicio1 button {
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ejercicio1 button:hover {
+    background-color: #0056b3;
+}
+
+.ejercicio1 button:focus {
+    outline: none;
+}
+
+#resultado1 {
+    text-align: center;
+    font-weight: bold;
+}
+
+h4{
+    font-style: oblique;
+}

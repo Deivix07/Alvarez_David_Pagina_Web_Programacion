@@ -17,7 +17,7 @@
         </video>
         <h1 id="title"></h1>
         <p id="text"></p>
-        <button id="btn-empezar" style="opacity: 100;"">Empezar</button>
+        <button id="btn-empezar" style="opacity: 0;" >Empezar</button>
     </div>
   
 
@@ -89,39 +89,39 @@
                         </div>
                     </div>
                     <div class="rectangulo" data-seccion="variables">
-                        <img src="img/icon3.png" class="icono">
+                        <img src="img/icon5.png" class="icono">
                         <div class="texto">
                             <p>Variables y Tipos de datos</p>
                         </div>
                     </div>
                     <div class="rectangulo" data-seccion="estructuras">
-                        <img src="img/icon4.png" class="icono">
+                        <img src="img/icon3.png" class="icono">
                         <div class="texto">
                             <p>Estructuras de Control</p>
                         </div>
                     </div>
                     <div class="rectangulo" data-seccion="funciones">
-                        <img src="img/icon4.png" class="icono">
+                        <img src="img/icon6.png" class="icono">
                         <div class="texto">
-                            <p>Bucles</p>
+                            <p>Funciones y Modularidad</p>
                         </div>
                     </div>
                     <div class="rectangulo" data-seccion="resumen">
-                        <img src="img/icon4.png" class="icono">
+                        <img src="img/icon7.png" class="icono">
                         <div class="texto">
-                            <p>Bucles</p>
+                            <p>Resumen y Conclusión</p>
                         </div>
                     </div>
-                    <div class="rectangulo" data-seccion="recursos">
-                        <img src="img/icon4.png" class="icono">
+                    <div class="rectangulo" data-seccion="ejercicio1">
+                        <img src="img/icon9.png" class="icono">
                         <div class="texto">
-                            <p>Bucles</p>
+                            <p>Ejercicio 1</p>
                         </div>
                     </div>
-                    <div class="rectangulo" data-seccion="ejercicios">
-                        <img src="img/icon4.png" class="icono">
+                    <div class="rectangulo" data-seccion="ejercicio2">
+                        <img src="img/icon8.png" class="icono">
                         <div class="texto">
-                            <p>Bucles</p>
+                            <p>Ejercicio 2</p>
                         </div>
                     </div>
                 </div>
@@ -138,6 +138,9 @@
                             <strong>Selección:</strong> El flujo del programa puede tomar diferentes caminos dependiendo de las condiciones (estructura if). <br>
                             <strong>Iteración:</strong> Permite repetir acciones utilizando bucles (for, while).
                         </p>
+                        <p><strong>Video sobre Programación Estructurada:</strong></p>
+                        <!-- Video de YouTube -->
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Om2bEqSMzAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
 
@@ -160,7 +163,7 @@
                         <pre><code>int edad = 21; // Variable de tipo entero
 float altura = 1.55; // Variable de tipo flotante
 char text = 'Hola mundo'; // Variable de tipo carácter
-bool esEstudiante = true; // Variable de tipo booleano"</code></pre>
+bool esEstudiante = true; // Variable de tipo booleano</code></pre>
                     </div>
                 </div>
 
@@ -252,15 +255,129 @@ bool esEstudiante = true; // Variable de tipo booleano"</code></pre>
                     </div>
                 </div>
 
-                <div id="modal-bucles" class="modal">
+                <div id="modal-funciones" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <h3>Bucles</h3>
-                        <p>Los bucles permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición...</p>
+                        <h3>Funciones y Modularidad</h3>
+                        <p>Las funciones permiten dividir un programa en bloques de código más pequeños y reutilizables, facilitando la comprensión y el mantenimiento del código.</p>
+                        <p><strong>Definición de Funciones:</strong> Una función es un bloque de código que realiza una tarea específica. Puede recibir parámetros y devolver un valor.</p>
+                        <pre><code>int suma(int a, int b) {
+    return a + b;
+}
+int main() {
+    int resultado = suma(5, 3);
+    printf("El resultado de la suma es: %d", resultado);
+    return 0;
+}</code></pre>
+                        <p><strong>Funciones con parámetros y retorno:</strong> Las funciones pueden tomar uno o más parámetros y devolver un valor de cualquier tipo.</p>
+                        <pre><code>float areaCirculo(float radio) {
+    return 3.1416 * radio * radio;
+}
+int main() {
+    float area = areaCirculo(5);
+    printf("El área del círculo es: %.2f", area);
+    return 0;
+}</code></pre>      
+                        <p><strong>Ventajas de la modularización:</strong>
+                        <p class="salto"><strong>Reutilización:</strong> El mismo bloque de código puede ser utilizado en distintas partes del programa.</p>
+                        <p class="salto"><strong>Facilidad de mantenimiento:</strong> Si hay un error, solo es necesario modificar el código de la función, no en todos los lugares donde se usa.</p>
+                    </div>
+                </div>
+
+                <div id="modal-resumen" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Resumen y Conclusión</h3>
+                        <p>La programación estructurada ayuda a mantener el código limpio, modular y fácil de entender. Con el uso de variables, estructuras de control y funciones, los programadores pueden crear aplicaciones eficientes y fáciles de depurar.</p>
+                        <p>
+                        <strong>Variables:</strong> Son esenciales para almacenar datos. <br>
+                        <strong>Estructuras de control:</strong> Permiten modificar el flujo de ejecución según condiciones. <br>
+                        <strong>Funciones:</strong> Facilitan la organización del código y permiten reutilizar tareas comunes.
+                        </p>
+                        <p>La programación estructurada es una base esencial para cualquier programador, y aunque existen paradigmas más complejos como la programación orientada a objetos, su aprendizaje es fundamental para entender la lógica de programación.</p>
+                    </div>
+                </div>
+
+                <div id="modal-ejercicio1" class="modal ejercicio1">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Ejercicio 1: Positivo, Negativo o Cero</h3>
+                        <p>Este ejercicio permite al usuario ingresar un número y recibir una respuesta sobre si es positivo, negativo o cero.</p>
+                        <input type="number" id="numeroInput" placeholder="Ingrese un número">
+                        <button onclick="verificarNumero()">Verificar</button>
+                        <p id="resultado1"></p>
+                        <h4>Código:</h4>
+                        <pre><code>// Función que verifica si el número es positivo, negativo o cero
+function verificarNumero() {
+    // Obtiene el valor ingresado en el campo de texto y lo convierte en número
+    let num = parseFloat(document.getElementById("numeroInput").value);
+    let resultado = ""; // Variable donde guardaremos el resultado de la verificación
+
+    // Condicional para verificar si el número es positivo
+    if (num > 0) {
+        resultado = "El número es positivo.";
+    } 
+    // Condicional para verificar si el número es negativo
+    else if (num < 0) {
+        resultado = "El número es negativo.";
+    } 
+    // Si el número no es ni positivo ni negativo, es cero
+    else {
+        resultado = "El número es cero.";
+    }
+
+    // Muestra el resultado en el párrafo con el id "resultado1"
+    document.getElementById("resultado1").innerText = resultado;
+}</code></pre>
+                    </div>
+                </div>
+
+                <div id="modal-ejercicio2" class="modal ejercicio1">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Ejercicio 2: FizzBuzz</h3>
+                        <p>Este ejercicio imprime los números del 1 al 100 y reemplaza ciertos números con las palabras "Fizz", "Buzz" o "FizzBuzz".</p>
+                        <p class="salto">
+                            <strong>"Fizz":</strong> Si el número es divisible por 3. <br>
+                            <strong>"Buzz":</strong> Si el número es divisible por 5. <br>
+                            <strong>"FizzBuzz":</strong> Si el número es divisible por 3 y 5. <br>
+                            <strong>Si el número no es divisible ni por 3 ni por 5,</strong> simplemente muestra el número.
+                        </p>
+                        <button onclick="mostrarFizzBuzz()">Imprimir</button>
+                        <p id="resultado2"></p>
+                        <h4>Código:</h4>
+                        <pre><code>// Función que ejecuta el juego FizzBuzz
+function mostrarFizzBuzz() {
+    let resultado = ""; // Variable para almacenar los resultados
+
+    // Bucle que recorre los números del 1 al 100
+    for (let i = 1; i <= 100; i++) {
+        // Si el número es divisible por 3 y 5, agregar "FizzBuzz"
+        if (i % 3 === 0 && i % 5 === 0) {
+            resultado += "FizzBuzz, ";
+        } 
+        // Si el número es divisible solo por 3, agregar "Fizz"
+        else if (i % 3 === 0) {
+            resultado += "Fizz, ";
+        } 
+        // Si el número es divisible solo por 5, agregar "Buzz"
+        else if (i % 5 === 0) {
+            resultado += "Buzz, ";
+        } 
+        // Si el número no es divisible ni por 3 ni por 5, agregar el número mismo
+        else {
+            resultado += i + ", ";
+        }
+    }
+
+    // Muestra el resultado final en el párrafo con el id "resultado3"
+    document.getElementById("resultado3").innerText = resultado.slice(0, -2);
+}</code></pre>
                     </div>
                 </div>
             </section>
-        
+
+<!--   PoooooooooOOOSODOSAODO     -->      
             <section id="poo" style="display: none;">
                 <h2>Programación Orientada a Objetos</h2>
                 <p>Aquí encontrarás información más detallada sobre POO...</p>
@@ -314,6 +431,8 @@ bool esEstudiante = true; // Variable de tipo booleano"</code></pre>
         </footer>
     </div>
 
+    <script src="script1.js"></script>
     <script src="script.js"></script>
+
 </body>
 </html>
