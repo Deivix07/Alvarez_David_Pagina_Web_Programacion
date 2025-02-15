@@ -17,7 +17,7 @@
         </video>
         <h1 id="title"></h1>
         <p id="text"></p>
-        <button id="btn-empezar" style="opacity: 0;" >Empezar</button>
+        <button id="btn-empezar" style="opacity: 100;" >Empezar</button>
     </div>
   
 
@@ -140,7 +140,9 @@
                         </p>
                         <p><strong>Video sobre Programación Estructurada:</strong></p>
                         <!-- Video de YouTube -->
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Om2bEqSMzAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Om2bEqSMzAE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
 
@@ -379,40 +381,353 @@ function mostrarFizzBuzz() {
 
 <!--   PoooooooooOOOSODOSAODO     -->      
             <section id="poo" style="display: none;">
-                <h2>Programación Orientada a Objetos</h2>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <img src="img/icon1.png" class="icono">
+                    <h2>Programación Orientada a Objetos</h2>
+                </div>
                 <p>Aquí encontrarás información más detallada sobre POO...</p>
 
                 <!-- Rectángulos para subsecciones -->
                 <div class="subsecciones">
-                    <div class="rectangulo" data-seccion="que-es-1">¿Qué es la Programación Estructurada?</div>
-                    <div class="rectangulo" data-seccion="condicionales-1">Condicionales</div>
-                    <div class="rectangulo" data-seccion="bucles-1">Bucles</div>
-                </div>
-
-                <!-- Ventanas flotantes (Modal) para cada subsección -->
-                <div id="modal-que-es-1" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <h3>¿Qué es la Programación Estructurada?</h3>
-                        <p>La programación estructurada se basa en dividir un programa en bloques de código que se pueden controlar mediante las estructuras secuenciales, condicionales e iterativas...</p>
+                    <div class="rectangulo" data-seccion="que-es-poo">
+                        <img src="img/icon2.png" class="icono">
+                        <div class="texto">
+                            <p>¿Qué es la Programación Orientada a Objetos (POO)?</p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="clases">
+                        <img src="img/icon5.png" class="icono">
+                        <div class="texto">
+                            <p>Clases y Objetos</p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="atributos">
+                        <img src="img/icon3.png" class="icono">
+                        <div class="texto">
+                            <p>Atributos y Métodos</p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="encapsulacion">
+                        <img src="img/icon6.png" class="icono">
+                        <div class="texto">
+                            <p>Encapsulamiento: Protección de Datos</p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="herencia">
+                        <img src="img/icon7.png" class="icono">
+                        <div class="texto">
+                            <p>Herencia: Reutilización de Código</p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="polim">
+                        <img src="img/icon9.png" class="icono">
+                        <div class="texto">
+                            <p>Polimorfismo: Métodos con Distintos Comportamientos/p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="conclusion">
+                        <img src="img/icon8.png" class="icono">
+                        <div class="texto">
+                            <p>Resumen y Conclusión</p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="ejer1">
+                        <img src="img/icon8.png" class="icono">
+                        <div class="texto">
+                            <p>Ejercicio 1</p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="ejer2">
+                        <img src="img/icon8.png" class="icono">
+                        <div class="texto">
+                            <p>Ejercicio 2</p>
+                        </div>
                     </div>
                 </div>
 
-                <div id="modal-condicionales-1" class="modal">
+                <div id="modal-que-es-poo" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <h3>Condicionales</h3>
-                        <p>Las estructuras condicionales permiten que el programa tome decisiones según las condiciones que se presenten...</p>
+                        <h3>¿Qué es la POO?</h3>
+                        <p>La Programación Orientada a Objetos (POO) es un paradigma de programación basado en la creación y manipulación de objetos. En lugar de estructurar el código en funciones y variables globales, en la POO se encapsulan datos y comportamientos dentro de clases y objetos.</p>
+                        <p>
+                            <strong>Principios clave de la POO:</strong>
+                        </p>
+                        <p class="salto1">
+                        Facilita la reutilización del código. <br>
+                        Mejora la organización y el mantenimiento del software. <br>
+                        Representa objetos del mundo real de forma más intuitiva.
+                        </p>
+                        <p><strong>Video sobre POO:</strong></p>
+                        <!-- Video de YouTube -->
+                        <div class="video-container">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/SI7O81GMG2A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
 
-                <div id="modal-bucles-1" class="modal">
+                <div id="modal-clases" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        <h3>Bucles</h3>
-                        <p>Los bucles permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición...</p>
+                        <h3>Clases y Objetos</h3>
+                        <p><strong>Clases:</strong></p>
+                        <p class="salto1">Son modelos o plantillas a partir de las cuales se crean los objetos.</p>
+                        <p><strong>Objetos:</strong></p>
+                        <p class="salto1">Son instancias concretas de una clase, con sus propios valores y comportamientos.</p>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>// Definición de una clase "Persona"
+class Persona {
+    constructor(nombre, edad) {
+        this.nombre = nombre; // Atributo
+        this.edad = edad; // Atributo
+    }
+
+    // Método para mostrar información
+    presentarse() {
+        return `Hola, soy ${this.nombre} y tengo ${this.edad} años.`;
+    }
+}
+
+// Creación de un objeto
+let persona1 = new Persona("Carlos", 25);
+console.log(persona1.presentarse()); // "Hola, soy Carlos y tengo 25 años."
+</code></pre>
                     </div>
                 </div>
+
+                <div id="modal-atributos" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Atributos y Métodos</h3>
+                        <p><strong>Atributos:</strong></p>
+                        <p class="salto1">Son las características o propiedades de un objeto.</p>
+                        <p><strong>Métodos:</strong></p>
+                        <p class="salto1">Son las funciones que definen el comportamiento del objeto.</p>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>// Definición de la clase "Coche"
+class Coche {
+    constructor(marca, modelo) {
+        this.marca = marca; // Atributo: Marca del coche
+        this.modelo = modelo; // Atributo: Modelo del coche
+    }
+
+    // Método que indica que el coche ha sido encendido
+    arrancar() {
+        return `${this.marca} ${this.modelo} está encendido.`;
+    }
+}
+
+// Creación de un objeto de la clase Coche
+let miCoche = new Coche("Toyota", "Corolla");
+
+// Llamar al método "arrancar" y mostrar el resultado
+console.log(miCoche.arrancar()); // "Toyota Corolla está encendido."
+</code></pre>
+                    </div>
+                </div>
+
+                <div id="modal-encapsulacion" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Encapsulamiento: Protección de Datos</h3>
+                        <p>El encapsulamiento es uno de los pilares de la Programación Orientada a Objetos (POO). Su objetivo es proteger los datos de una clase y controlar cómo pueden ser accedidos o modificados desde fuera. Para lograr esto, los lenguajes de programación utilizan modificadores de acceso, que determinan la visibilidad de los atributos y métodos de una clase.</p>
+                        <p><strong>Modificadores de Acceso en POO</strong></p>
+                        <p class="salto"><strong>Público (public):</strong> Se puede acceder desde cualquier parte del programa.</p>
+                        <p class="salto"><strong>Protegido (protected):</strong> Se puede acceder dentro de la clase y sus subclases.</p>
+                        <p class="salto"><strong>Privado (private):</strong> Solo es accesible dentro de la misma clase.</p>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>// Definición de la clase "CuentaBancaria" con un atributo privado
+class CuentaBancaria {
+    #saldo; // Atributo privado: saldo de la cuenta
+
+    constructor(saldoInicial) {
+        this.#saldo = saldoInicial; // Inicializa el saldo con el valor dado
+    }
+
+    // Método para depositar dinero en la cuenta
+    depositar(cantidad) {
+        this.#saldo += cantidad; // Aumenta el saldo con la cantidad depositada
+        return `Has depositado ${cantidad}. Saldo actual: ${this.#saldo}`;
+    }
+
+    // Método para retirar dinero de la cuenta
+    retirar(cantidad) {
+        if (cantidad > this.#saldo) {
+            return "Saldo insuficiente."; // Verifica si hay suficiente saldo
+        }
+        this.#saldo -= cantidad; // Disminuye el saldo con la cantidad retirada
+        return `Has retirado ${cantidad}. Saldo actual: ${this.#saldo}`;
+    }
+
+    // Método para obtener el saldo actual de la cuenta
+    obtenerSaldo() {
+        return `Tu saldo actual es: ${this.#saldo}`;
+    }
+}
+
+// Creación de un objeto "cuenta" con un saldo inicial de 500
+let cuenta = new CuentaBancaria(500);
+
+// Realizar operaciones y mostrar los resultados
+console.log(cuenta.depositar(200)); // "Has depositado 200. Saldo actual: 700"
+console.log(cuenta.retirar(100));   // "Has retirado 100. Saldo actual: 600"
+</code></pre>
+                    </div>
+                </div>
+
+                <div id="modal-herencia" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Herencia: Reutilización de Código</h3>
+                        <p>La herencia permite que una clase (llamada clase hija o subclase) adquiera los atributos y métodos de otra clase (llamada clase padre o superclase). Esto evita la repetición de código y facilita la extensión de funcionalidades.</p>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>// Definición de la clase padre "Animal"
+class Animal {
+    constructor(nombre) {
+        this.nombre = nombre; // Atributo: nombre del animal
+    }
+
+    // Método que devuelve un sonido genérico de un animal
+    hacerSonido() {
+        return "Hace un sonido";
+    }
+}
+
+// Definición de la clase hija "Perro", que hereda de "Animal"
+class Perro extends Animal {
+    // Sobrescribimos el método "hacerSonido"
+    hacerSonido() {
+        return "Ladra";
+    }
+}
+
+// Creación de un objeto de la clase "Perro"
+let miPerro = new Perro("Max");
+
+// Llamar al método "hacerSonido" y mostrar el resultado
+console.log(miPerro.hacerSonido()); // "Ladra"
+</code></pre>
+                    </div>
+                </div>
+
+                <div id="modal-polim" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Polimorfismo: Métodos con Distintos Comportamientos</h3>
+                        <p>El polimorfismo permite que un mismo método tenga diferentes comportamientos según la clase que lo implemente. Hay dos tipos principales:</p>
+                        <p class="salto"><strong>Polimorfismo de Sobreescritura (Override):</strong> Cuando una subclase redefine un método de la clase padre.</p>
+                        <p class="salto"><strong>Polimorfismo de Sobrecarga (Overload):</strong> Cuando varios métodos tienen el mismo nombre pero diferente cantidad o tipo de parámetros.</p>
+                        <p><strong>Ejemplo:</strong></p>
+                        <pre><code>// Definición de la clase "Ave"
+class Ave {
+    // Método que indica que algunas aves pueden volar
+    volar() {
+        return "Algunas aves pueden volar.";
+    }
+}
+
+// Definición de la clase "Aguila", que hereda de "Ave"
+class Aguila extends Ave {
+    // Se sobrescribe el método "volar"
+    volar() {
+        return "El águila vuela alto.";
+    }
+}
+
+// Definición de la clase "Pinguino", que también hereda de "Ave"
+class Pinguino extends Ave {
+    // Se sobrescribe el método "volar" porque los pingüinos no vuelan
+    volar() {
+        return "El pingüino no puede volar.";
+    }
+}
+
+// Creación de objetos de las clases "Aguila" y "Pinguino"
+let aguila = new Aguila();
+let pinguino = new Pinguino();
+
+// Llamar al método "volar" y mostrar el resultado
+console.log(aguila.volar());  // "El águila vuela alto."
+console.log(pinguino.volar()); // "El pingüino no puede volar."
+</code></pre>
+                    </div>
+                </div>
+
+                <div id="modal-conclusion" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Resumen y Conclusión</h3>
+                        <p>La Programación Orientada a Objetos (POO) organiza el código mediante clases y objetos, promoviendo la reutilización y el mantenimiento eficiente del software. Los conceptos clave de POO incluyen:</p>
+                        <p class="salto"><strong>Clases y Objetos:</strong> Las clases definen atributos y métodos, mientras que los objetos son instancias de esas clases.</p>
+                        <p class="salto"><strong>Encapsulamiento:</strong> Protege los datos usando modificadores de acceso como public, private, y protected.</p>
+                        <p class="salto"><strong>Herencia:</strong> Permite que una subclase herede atributos y métodos de una superclase, promoviendo la reutilización de código.</p>
+                        <p class="salto"><strong>Polimorfismo:</strong> Un mismo método puede tener diferentes comportamientos dependiendo del objeto que lo invoque, mediante sobrescritura o sobrecarga.</p>
+                        <p>La POO facilita la creación de software modular, escalable y fácil de mantener. Sus conceptos como herencia, polimorfismo y encapsulamiento son fundamentales para escribir código limpio y eficiente, utilizado en lenguajes como Java, C#, Python y JavaScript. Aprender POO es esencial para cualquier programador.</p>
+                    </div>
+                </div>
+
+                <div id="modal-ejer1" class="modal ejercicio1">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Ejercicio 1: Calcular el Área de un Círculo</h3>
+                        <p>Este ejercicio te enseñará a crear una clase con un atributo y un método que realice un cálculo (en este caso, el área de un círculo).</p>
+                        <input type="number" id="radio" placeholder="Introduce el radio del círculo">
+                        <button onclick="calcularArea()">Calcular Área</button>
+                        <p id="resultado"></p>
+                        <h4>Código:</h4>
+                        <pre><code>// Clase Círculo
+class Circulo {
+    constructor(radio) {
+        this.radio = radio; // Atributo de la clase
+    }
+
+    calcularArea() {
+        return Math.PI * Math.pow(this.radio, 2); // Fórmula para calcular el área
+    }
+}
+
+// Función para calcular el área
+function calcularArea() {
+    const radio = parseFloat(document.getElementById("radio").value);
+    const circulo = new Circulo(radio); // Crear un objeto de la clase Circulo
+    const area = circulo.calcularArea();
+    document.getElementById("resultado").textContent = `El área del círculo es: ${area.toFixed(2)} unidades cuadradas.`;
+}</code></pre>
+                    </div>
+                </div>
+
+                <div id="modal-ejer2" class="modal ejercicio1">
+                    <div class="modal-content ejeremp">
+                        <span class="close">&times;</span>
+                        <h3>Ejercicio 2: Información de un Empleado</h3>
+                        <p>Este ejercicio te permitirá practicar el uso de clases con atributos más complejos y métodos que devuelvan información.</p>
+                        <input type="text" id="nombre" placeholder="Introduce el nombre del empleado"> <br>
+                        <input type="number" id="salario" placeholder="Introduce el salario del empleado"> <br>
+                        <button onclick="mostrarEmpleado()">Mostrar Información</button>
+                        <p id="resultadoEmpleado"></p>
+                        <h4>Código:</h4>
+                        <pre><code>// Clase Empleado
+class Empleado {
+    constructor(nombre, salario) {
+        this.nombre = nombre; // Nombre del empleado
+        this.salario = salario; // Salario del empleado
+    }
+
+    mostrarInformacion() {
+        return `${this.nombre} gana un salario de $${this.salario.toFixed(2)} al mes.`;
+    }
+}
+
+// Función para mostrar la información del empleado
+function mostrarEmpleado() {
+    const nombre = document.getElementById("nombre").value;
+    const salario = parseFloat(document.getElementById("salario").value);
+    const empleado = new Empleado(nombre, salario); // Crear un objeto de la clase Empleado
+    document.getElementById("resultadoEmpleado").textContent = empleado.mostrarInformacion();
+}</code></pre>
+                    </div>
+                </div>
+
             </section>
         
             <section id="blog" style="display: none;">
