@@ -85,9 +85,39 @@ document.addEventListener("DOMContentLoaded", () => {
         button.style.transition = "opacity 1s ease-in-out"; // Establecer la transición
         button.style.opacity = 1; // Cambiar la opacidad para mostrar el botón
         button.style.pointerEvents = "auto"; // Habilitar los eventos del botón
-      }
+    }
   
     // Iniciar escritura en orden
     typeTitle(() => typeText(showButton));
-    //
+
+    // Obtener los rectángulos, los modales y los botones de cerrar
+    const btnsAbrirModal = document.querySelectorAll(".rectangulo"); // Los rectángulos
+    const modals = document.querySelectorAll(".modal"); // Todos los modales
+    const spanCerrar = document.querySelectorAll(".close"); // Los botones de cerrar
+
+    // Abrir el modal correspondiente al hacer clic en un rectángulo
+    btnsAbrirModal.forEach(btn => {
+        btn.addEventListener("click", (event) => {
+            const seccion = btn.getAttribute("data-seccion"); // Obtener el data-seccion del rectángulo
+            const modal = document.getElementById("modal-" + seccion); // Seleccionar el modal correspondiente
+            modal.style.display = "block"; // Mostrar el modal
+        });
+    });
+
+    // Cerrar el modal al hacer clic en el botón de cerrar
+    spanCerrar.forEach(span => {
+        span.addEventListener("click", () => {
+            const modal = span.closest(".modal"); // Seleccionar el modal más cercano
+            modal.style.display = "none"; // Ocultar el modal
+        });
+    });
+
+    // Cerrar el modal al hacer clic fuera del modal
+    window.addEventListener("click", (event) => {
+        modals.forEach(modal => {
+            if (event.target === modal) {
+                modal.style.display = "none"; // Ocultar el modal si se hace clic fuera de él
+            }
+        });
+    });
 });

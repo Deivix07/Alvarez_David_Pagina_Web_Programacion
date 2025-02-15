@@ -5,15 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprende Programación</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
 </head>
 <body>
-
-    <!-- Pantalla de bienvenidas -->
+    <!-- Pantalla de bienvenida -->
     <div id="bienvenida">
+                <!-- Video de fondo -->
+        <video id="miVideo" autoplay loop muted>
+            <source src="img/v2.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
         <h1 id="title"></h1>
         <p id="text"></p>
-        <button id="btn-empezar" style="opacity: 0; pointer-events: none">Empezar</button>
+        <button id="btn-empezar" style="opacity: 100;"">Empezar</button>
     </div>
+  
 
     <!-- Contenido principal (se oculta hasta que se presiona "Empezar") -->
     <div id="contenido-principal" style="display: none;">
@@ -68,13 +74,150 @@
             </section>
 
             <section id="pe" style="display: none;">
-                <h2>Programación Estructurada</h2>
+                <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <img src="img/icon1.png" class="icono">
+                    <h2>Programación Estructurada</h2>
+                </div>
                 <p>Aquí encontrarás información más detallada sobre Programación Estructurada...</p>
+
+                <!-- Rectángulos para subsecciones -->
+                <div class="subsecciones">
+                    <div class="rectangulo" data-seccion="que-es">
+                        <img src="img/icon2.png" class="icono">
+                        <div class="texto">
+                            <p>¿Qué es la Programación Estructurada?</p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="variables">
+                        <img src="img/icon3.png" class="icono">
+                        <div class="texto">
+                            <p>Condicionales</p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="estructuras">
+                        <img src="img/icon4.png" class="icono">
+                        <div class="texto">
+                            <p>Bucles</p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="funciones">
+                        <img src="img/icon4.png" class="icono">
+                        <div class="texto">
+                            <p>Bucles</p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="resumen">
+                        <img src="img/icon4.png" class="icono">
+                        <div class="texto">
+                            <p>Bucles</p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="recursos">
+                        <img src="img/icon4.png" class="icono">
+                        <div class="texto">
+                            <p>Bucles</p>
+                        </div>
+                    </div>
+                    <div class="rectangulo" data-seccion="ejercicios">
+                        <img src="img/icon4.png" class="icono">
+                        <div class="texto">
+                            <p>Bucles</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ventanas flotantes (Modal) para cada subsección -->
+                <div id="modal-que-es" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>¿Qué es la Programación Estructurada?</h3>
+                        <p>La programación estructurada es un estilo de programación que organiza el flujo de ejecución del programa de manera lógica, permitiendo que sea más comprensible y fácil de mantener. A diferencia de otros paradigmas como la programación orientada a objetos, se enfoca en el uso de estructuras de control y la organización secuencial del código</p>
+                        <p> <strong>Principales características:</strong><br>
+                            <strong>Secuencia:</strong> El código se ejecuta en orden, línea por línea, sin saltos inesperados. <br>
+                            <strong>Selección:</strong> El flujo del programa puede tomar diferentes caminos dependiendo de las condiciones (estructura if). <br>
+                            <strong>Iteración:</strong> Permite repetir acciones utilizando bucles (for, while).
+                        </p>
+                    </div>
+                </div>
+
+                <div id="modal-variables" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Variables y Tipos de datos</h3>
+                        <p>Las <strong>variables</strong> son contenedores que almacenan datos y que pueden cambiar durante la ejecución del programa. Para declarar una variable, es necesario especificar el <strong>tipo de dato</strong> (números, caracteres, booleanos, etc.) que almacenará y un nombre único para la variable.</p>
+                        <p> <strong>Tipos de Datos:</strong> <br>
+                            <strong>Entero (int):</strong> Almacena números enteros. <br>
+                            <strong>Flotante (float):</strong> Almacena números con decimales. <br>
+                            <strong>Doble (double):</strong> Similar a float, pero con mayor precisión. <br>
+                            <strong>Carácter (char):</strong> Almacena un solo carácter. <br>
+                            <strong>Booleano (bool):</strong> Solo puede ser true o false. <br>
+                        </p>
+                        <p>
+                            <strong>Ejemplo:</strong>
+                        </p>
+                        <pre><code>int suma(int a, int b) {
+    return a + b;
+}
+int main() {
+    int resultado = suma(5, 3);
+    printf("El resultado de la suma es: %d", resultado);
+    return 0;
+}</code></pre>
+                    </div>
+                </div>
+
+                <div id="modal-condicionales" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Condicionales</h3>
+                        <p>Las estructuras condicionales permiten que el programa tome decisiones según las condiciones que se presenten...</p>
+                    </div>
+                </div>
+
+                <div id="modal-bucles" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Bucles</h3>
+                        <p>Los bucles permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición...</p>
+                    </div>
+                </div>
             </section>
         
             <section id="poo" style="display: none;">
                 <h2>Programación Orientada a Objetos</h2>
                 <p>Aquí encontrarás información más detallada sobre POO...</p>
+
+                <!-- Rectángulos para subsecciones -->
+                <div class="subsecciones">
+                    <div class="rectangulo" data-seccion="que-es-1">¿Qué es la Programación Estructurada?</div>
+                    <div class="rectangulo" data-seccion="condicionales-1">Condicionales</div>
+                    <div class="rectangulo" data-seccion="bucles-1">Bucles</div>
+                </div>
+
+                <!-- Ventanas flotantes (Modal) para cada subsección -->
+                <div id="modal-que-es-1" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>¿Qué es la Programación Estructurada?</h3>
+                        <p>La programación estructurada se basa en dividir un programa en bloques de código que se pueden controlar mediante las estructuras secuenciales, condicionales e iterativas...</p>
+                    </div>
+                </div>
+
+                <div id="modal-condicionales-1" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Condicionales</h3>
+                        <p>Las estructuras condicionales permiten que el programa tome decisiones según las condiciones que se presenten...</p>
+                    </div>
+                </div>
+
+                <div id="modal-bucles-1" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h3>Bucles</h3>
+                        <p>Los bucles permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición...</p>
+                    </div>
+                </div>
             </section>
         
             <section id="blog" style="display: none;">
